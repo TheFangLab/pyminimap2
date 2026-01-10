@@ -56,7 +56,3 @@ before-all = "yum install -y zlib-devel"
 
 # Environment variables
 environment = { CFLAGS = "-O2 -g" }
-
-# If aarch64 support is needed
-[tool.cibuildwheel.linux.environment]
-CFLAGS = "-O2 -g"
