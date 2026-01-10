@@ -28,7 +28,7 @@ git clone https://github.com/TheFangLab/pyminimap2.git
 cd pyminimap2
 pip install .
 ```
-Choose this option if you are using Python 3.13 or a later version. You need to have a C compiler (e.g. GCC). 
+Choose this option if you are using Python 3.14 or a later version. You need to have a C compiler (e.g. GCC). 
 
 
 ## How to use
