@@ -15,7 +15,7 @@ In our benchmark, running `pyminimap2.main('--version')` is approximately **20â€
 
 **Option 1: Install via pip (Recommended)**
 
-We provide pre-compiled binaries for Linux and Python versions 3.9 to 3.12. Simply run the following command:
+We provide pre-compiled binaries for Linux and Python versions 3.9 to 3.13. Simply run the following command:
 
 ```bash
 pip install pyminimap2
