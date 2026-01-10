@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyminimap2"
+version = "2.30.3"
+description = "Python wrapper for minimap2 with stdout/stderr capture"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: C",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+keywords = ["minimap2", "bioinformatics", "sequence alignment", "genomics"]
+
+[project.urls]
+Homepage = "https://github.com/TheFangLab/pyminimap2"
+Repository = "https://github.com/TheFangLab/pyminimap2"
+Issues = "https://github.com/TheFangLab/pyminimap2/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# cibuildwheel configuration
+[tool.cibuildwheel]
+# Build Python versions
+build = "cp39-* cp310-* cp311-* cp312-* cp313-*"
+
+# Skip platforms
+skip = "*-win32 *-manylinux_i686 pp* *-musllinux*"
+
+# Test command
+test-command = "python -c \"import pyminimap2; print(pyminimap2.main('--version'))\""
+
+[tool.cibuildwheel.linux]
+# manylinux image (Using manylinux_2_28 as CentOS 7 EOL)
+manylinux-x86_64-image = "manylinux_2_28"
+
+# Install system dependencies before build
+before-all = "yum install -y zlib-devel"
+
+# Environment variables
+environment = { CFLAGS = "-O2 -g" }
+
+# If aarch64 support is needed
+[tool.cibuildwheel.linux.environment]
+CFLAGS = "-O2 -g"
