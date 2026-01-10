@@ -1,0 +1,46 @@
+# C language intermediate files
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.dSYM
+*.su
+*.gch
+*.pch
+
+# Python intermediate files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
