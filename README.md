@@ -89,6 +89,16 @@ import pyminimap2 as pymm2
 print(pymm2.main('--version')[0])
 ```
 
+## Maintainers
+
+`pyminimap2` is currently maintained by [Li Fang](https://fanglab.cn) at Sun Yat-sen University. For issues and feature requests, please open an issue [here](https://github.com/TheFangLab/pyminimap2/issues).
+
+## Acknowledgments
+
+- [Heng Li](https://github.com/lh3), original author and maintainer of [minimap2](https://github.com/lh3/minimap2).
+- All contributors to the minimap2 project.
+
+
 ## License
 
 `pyminimap2` is released under the MIT license.
